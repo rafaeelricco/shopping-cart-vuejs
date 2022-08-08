@@ -35,11 +35,7 @@
           <p class="details-card">+ Vivo Home Assist</p>
           <h1 class="price-card">R${{ product.price }}0</h1>
           <div class="buttons">
-            <button
-              v-if="!stateTV(product)"
-              :disabled="!stateFixo(product)"
-              @click="ADD_ITEM(product)"
-            >
+            <button v-if="!stateTV(product)" @click="ADD_ITEM(product)">
               Selecionar
             </button>
             <button @click="REMOV_ITEM(product)">Remover</button>

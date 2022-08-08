@@ -38,7 +38,10 @@
             <button v-if="stateInternet(product)" @click="ADD_ITEM(product)">
               Adicionar
             </button>
-            <button :disabled="stateFixo(product)" @click="REMOV_ITEM(product)">
+            <button
+              :disabled="!stateFixo(product)"
+              @click="REMOV_ITEM(product)"
+            >
               Remover
             </button>
           </div>

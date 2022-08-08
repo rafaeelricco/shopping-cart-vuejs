@@ -53,14 +53,14 @@ export default {
       }
     },
     stateFixo() {
-      if (this.$store.state.cart.length == 2) {
-        return true
-      } else {
+      if (this.$store.state.cart.length >= 2) {
         return false
+      } else {
+        return true
       }
     },
     stateTV() {
-      if (this.$store.state.cart.length == 3) {
+      if (this.$store.state.cart.length >= 3) {
         return true
       } else {
         return false

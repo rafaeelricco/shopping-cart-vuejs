@@ -12,14 +12,12 @@
         </p>
         <h1 class="price-card-fixo">R${{ product.price }}</h1>
         <div class="buttons">
-          <button
-            v-if="!stateFixo(product)"
-            :disabled="stateInternet(product)"
-            @click="ADD_ITEM(product)"
-          >
+          <button v-if="stateFixo(product)" @click="ADD_ITEM(product)">
             Adicionar
           </button>
-          <button @click="REMOV_ITEM(product)">Remover</button>
+          <button :disabled="stateTV(product)" @click="REMOV_ITEM(product)">
+            Remover
+          </button>
         </div>
       </div>
     </div>
