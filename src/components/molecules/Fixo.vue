@@ -19,7 +19,9 @@
           >
             Adicionar
           </button>
-          <button @click="REMOV_ITEM(product)">Remover</button>
+          <button :disabled="stateTV(product)" @click="REMOV_ITEM(product)">
+            Remover
+          </button>
         </div>
       </div>
     </div>
