@@ -17,12 +17,10 @@
       <p>Total</p>
       <p>{{ $cartTotal }}</p>
     </div>
-    <div class="buttons-cart">
-      <button class="btn-continuar">Finalizar</button>
-      <button @click="CLEAR_CART(products)" class="btn-continuar">
-        Limpar carrinho
-      </button>
-    </div>
+    <button class="btn-continuar">Finalizar</button>
+    <!-- <button @click="CLEAR_CART(products)" class="btn-clean">
+      Limpar carrinho
+    </button> -->
   </div>
 </template>
 
@@ -57,21 +55,7 @@ export default {
   width: 12rem;
   height: 2.218rem;
   color: #fff;
+  font-weight: 700;
   border-radius: 0.618rem;
-}
-
-.buttons-cart {
-  display: grid;
-  grid-gap: 1rem;
-  grid-auto-flow: column;
-  justify-content: space-between;
-  margin: 1.618rem 0 0 0;
-}
-@media (max-width: 632px) {
-  .buttons-cart {
-    grid-auto-flow: row;
-    grid-gap: 1rem;
-    justify-content: space-between;
-  }
 }
 </style>
