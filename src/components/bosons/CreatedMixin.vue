@@ -7,12 +7,15 @@ export default {
     }
   },
   computed: {
+    // lista de produtos no carrinho
     $allProducts() {
       return this.$store.getters.$allProducts
     },
+    // produtos no carrinho
     $cartProducts() {
       return this.$store.getters.$cartProducts
     },
+    // soma do total do carrinho
     $cartTotal() {
       return this.$store.getters.$cartTotal
     },
@@ -27,9 +30,11 @@ export default {
     }
   },
   methods: {
+    // método que adiciona um produto ao carrinho
     ADD_ITEM(product) {
       this.$store.dispatch('ADD_PRODUCT', product)
     },
+    // método que remove um produto do carrinho
     REMOV_ITEM(product) {
       this.$store.dispatch('REMOVE_PRODUCT', product)
     },
@@ -48,8 +53,10 @@ export default {
       }
     },
     stateFixo() {
-      if (this.$store.state.cart.length >= 2) {
+      if (this.$store.state.cart.length == 2) {
         return true
+      } else {
+        return false
       }
     },
     stateTV() {
@@ -61,6 +68,7 @@ export default {
     }
   },
   created() {
+    // faz a busca de dados quando a aplicação é iniciada
     this.$store.dispatch('fetchProducts')
   }
 }

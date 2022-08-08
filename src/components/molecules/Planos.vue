@@ -36,7 +36,7 @@
           <h1 class="price-card">R$ {{ product.price }}</h1>
           <div class="buttons">
             <button v-if="stateInternet(product)" @click="ADD_ITEM(product)">
-              Selecionar
+              Adicionar
             </button>
             <button :disabled="stateFixo(product)" @click="REMOV_ITEM(product)">
               Remover
@@ -55,7 +55,9 @@ export default {
   mixins: [CreatedMixin],
   computed: {
     filterProducts: function () {
+      // filtra os produtos pela categoria
       return this.$store.state.products.filter((product) => {
+        // retorna os produtos que sejam da categoria Internet
         return product.category === 'Internet'
       })
     }
