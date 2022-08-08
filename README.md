@@ -5,7 +5,7 @@ Este é um pequeno sistema de carrinho de compras feito com Vue.js usando Vuex p
 
 ##
 
- - [Demo]()
+ - [Demo](https://shopping-cart-vuejs-a3sc1newo-rafaeelricco.vercel.app/)
  - [API Repo](https://github.com/rafaeelricco/api-json-server)
  - [Docker Hub](https://hub.docker.com/repository/docker/orafaelricco/shopping-cart/general)
 ## Funcionalidades
