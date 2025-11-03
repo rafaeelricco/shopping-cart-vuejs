@@ -19,7 +19,7 @@
     </div>
     <div class="buttons-cart">
       <button class="btn-continuar">Finalizar</button>
-      <button @click="CLEAR_CART(products)" class="btn-continuar">
+      <button class="btn-continuar" @click="CLEAR_CART(products)">
         Limpar carrinho
       </button>
     </div>
@@ -55,23 +55,19 @@ export default {
   background-color: #ff9901;
   border-style: none;
   width: 12rem;
-  height: 2.218rem;
+  height: 2.518rem;
   color: #fff;
   border-radius: 0.618rem;
 }
-
 .buttons-cart {
   display: grid;
-  grid-gap: 1rem;
   grid-auto-flow: column;
   justify-content: space-between;
-  margin: 1.618rem 0 0 0;
 }
-@media (max-width: 632px) {
+@media screen and (max-width: 632px) {
   .buttons-cart {
     grid-auto-flow: row;
     grid-gap: 1rem;
-    justify-content: space-between;
   }
 }
 </style>

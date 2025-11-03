@@ -37,7 +37,7 @@
           <div class="buttons">
             <button
               v-if="!stateTV(product)"
-              :disabled="!stateFixo(product)"
+              :disabled="stateFixo(product)"
               @click="ADD_ITEM(product)"
             >
               Selecionar

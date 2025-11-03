@@ -13,7 +13,7 @@
         <h1 class="price-card-fixo">R${{ product.price }}</h1>
         <div class="buttons">
           <button
-            v-if="!stateFixo(product)"
+            v-if="stateFixo(product)"
             :disabled="stateInternet(product)"
             @click="ADD_ITEM(product)"
           >
